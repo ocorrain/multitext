@@ -1,0 +1,12 @@
+(in-package #:mess)
+
+
+(defparameter *dobdob-site* "/Users/ocorrain/mess_db/")
+(defparameter *www-root* "/Library/WebServer/Documents/")
+(defparameter *mess-program-site* "/Users/ocorrain/src/messing/")
+(defparameter *convert-program* "/opt/local/bin/convert")
+(defparameter *url-base* "http://localhost")
+(defparameter *log-level* 6)
+(defparameter *log-file* "/Users/ocorrain/mess_db/multitext.log")
+(defparameter *css-files* '("/multitext.css"))
+(defparameter *index-file* (concatenate 'string *dobdob-site* "idx"))

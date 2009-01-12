@@ -1,0 +1,293 @@
+body {
+	margin:0px;
+	padding:0px;
+       font: 11pt/16pt serif;
+       color:black;
+       background:white;
+       }
+
+h1 {
+	font:22px serif;
+     }
+
+
+h2 {
+	font:bold 16px serif;
+	}
+
+h3{ font: 12pt sans-serif; } 
+
+
+a {
+    color: black;/* #663333; */
+    text-decoration: none;
+    }
+a:visited {color: #663333;}
+a:link {color: #333366;}
+a:hover {text-decoration: underline;
+          }
+
+#xrefs {
+	padding: 1em;
+	text-align: left;
+}
+
+#searchresults { font: 9pt;}
+
+#searchresults h4{ font: 9pt sans-serif;
+                   padding: 0px;
+                   margin: 0px;}
+
+#searchresults ul{ list-style: square;}
+
+#tableofcontents ul{ list-style: none;}
+
+a.display { background-color: #663333;
+            color:white ;
+            border: 1px solid black;
+            padding: 2px;}
+
+a.display:hover { border: 1px solid red; }
+
+ul{ list-style-type: square; }
+
+ol {
+   list-style-type: lower-roman;
+   }
+
+/* Red borders and so on for the edit bar */
+.editbar {
+           border: solid;
+           border-width: thin;
+           border-color: red;
+}
+
+
+img.slideshow{ border: 0; }
+
+#displayimage{ float: right;
+                margin: 0.5em; 
+               padding: 0.5em;
+               width: 300px;
+               text-align: center;
+             /*   border-left: 1px solid #CCCCCC; */
+/*                border-bottom: 1px solid #CCCCCC; */}
+
+a.printerfriendly { 
+                  color: #999999;
+                  padding: 2px;
+                  margin: 0px;
+                  text-align: right;
+                  }
+
+a.printerfriendly:link   {color: #999999;
+                           border: 1px dotted;}
+
+a.printerfriendly:hover  {color:black ;
+                           background-color: white;
+                           border: solid;
+                           border-width: thin;
+                           border-color: #FFFF33;
+                           text-decoration: none;}
+
+p.caption { font: 10pt/12pt serif;
+            text-align: justify;}
+
+.navbar { margin:0px 0px 0px 0px;
+          background-color:  #FFFFCC;
+          color: #663333;
+          padding: 2px;
+          font-size: 110%;
+          text-decoration: none;}
+
+.auth { padding: 0.5em;
+        display: block;
+        border: 1px solid #CCCCCC; 
+        font: 9pt/11pt sans-serif;
+}
+
+
+a.button:hover{ background-color: #CCCCCC;
+                 color: black;
+                text-decoration: none;}
+
+.displaycontent{ padding: 1em;
+                 font-size: 120%;
+                 color: #663333;}
+
+.displaycontent>h3 { text-decoration: italic;
+                     border-color: grey;}
+
+#navBeta h2 {
+                 color: #70321A;
+                 font:12pt sans-serif; }
+
+#navBeta ol { 
+	         list-style: decimal;
+                 margin: 1em;
+                 padding-left: 1em;
+                 font: 10pt/12pt serif;
+                 }
+
+/* .contentbox>li{ margin:0; */
+/*                 padding:0; */
+/*                 text-indent: 1em;} */
+
+
+/* All the content boxes belong to the content class. */
+.content {
+           position:relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+           width:auto;
+           min-width:120px;
+           margin:0px 210px 0px 190px;
+           background-color:white;
+           padding:10px;
+           z-index:3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+           }
+
+.printable{ width: 60em;
+            margin: 5em;
+            text-align: justify;}
+
+.contentwide {
+/*                position:relative; /\* Position is declared "relative" to gain control of stacking order (z-index). *\/ */
+               width:auto;
+               min-width:120px;
+               margin:0px 330px 0px 30px; 
+               text-align: justify;
+/*                padding:10px; */
+               z-index:3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+	}
+
+.thumbnail{
+            font: 10pt serif;
+            text-align: center;
+            padding: 5px;}
+
+.contentwide h2 { font: 14pt sans-serif; 
+                  padding-top: 1em;
+                  color: #70321A;
+                  }
+
+#searchloginbar {
+	padding:0;
+/*	border: 1px solid yellow; */
+	background-color:#eee;
+}
+
+#navAlpha {
+	position:absolute;
+	width:150px;
+	top:100px;
+	left:5px;
+/*	border:1px dashed black; */
+/*         border: 1px solid black; */
+	background-color:#FFFFCC;
+	padding:10px;
+	z-index:2;
+            }
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:128px;
+	}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#navAlpha {width:128px;}
+		
+#navBeta {
+
+/*	position:absolute; */
+	float: right;
+	width:300px; 
+	text-align: center;
+/*	top:0px;*/
+/*	right:5px; */
+/*        border-left: 1px dotted grey;*/
+/*	border:1px dashed black; */
+/*         border-left:1px solid grey; */
+/*         border-bottom:1px solid grey; */
+	padding:1em;
+/*	z-index:1; */
+/* Again, the ugly brilliant hack. */
+/*	voice-family: "\"}\"";*/
+/*	voice-family:inherit;*/
+/*	width:168px;*/
+	}
+
+#navBetawide {
+	position:absolute;
+	width:250px;
+	top:0px;
+	right:5px;
+	padding:10px;
+	z-index:1;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:250px;
+	}
+/* Again, "be nice to Opera 5". */
+body>#navBeta {width:250px;}
+
+#header { padding-top: 0;
+	margin: 0;
+	border-bottom: 2px solid #827665;}
+
+#header h1 { font-size: 22pt;
+             color: #70321A;
+             margin:0px 200px 0px 0px;
+}
+
+#menu{ 
+       margin:0px 300px 0px 0px;
+       text-align:center;
+       font:9pt verdana, arial, helvetica, sans-serif;
+ }
+
+#menu ul { padding: 0;
+           margin: 0;
+	   list-style-type: none;
+
+}
+
+
+#menu li { float: left;
+	   border-right: 1px solid;
+	   border-bottom: 1px solid #827665;
+           position: relative;
+           width: 10em;
+	   background-color: white;
+
+}
+
+#menu a {color: #70321A;  
+      display: block;
+      text-decoration: none;}
+#menu a:hover { 
+                background-color: #827665;
+		color: white; }
+
+#menu li ul { display: none;
+              position: absolute;
+              top: 1em;
+              left: 0;
+	      text-align: left;
+              list-style: none;
+
+              }
+
+#menu li > ul {
+	top: auto;
+	left: auto;
+	}
+
+#menu li:hover ul, li.over ul{ display: block;
+                               border: 1px solid #70321A;}
